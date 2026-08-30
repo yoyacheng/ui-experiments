@@ -59,9 +59,20 @@ function BillsDemo() {
   const [tab, setTab] = useState<'upcoming'|'all'>('upcoming');
   const [sortOpen, setSortOpen] = useState(false);
   const [dark, setDark] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const selectedBill = bills[selected];
   const embedded = new URLSearchParams(window.location.search).has('embed');
+  const embeddedScale = embedded ? Math.min(.82, Math.max(.5, (viewportWidth - 48) / 460)) : 1;
+
+  useEffect(() => {
+    const onResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
   return <main className={`stage ${dark ? 'dark' : ''} ${embedded ? 'embedded' : ''}`}>
+    <div className="prototype-shell" style={{ '--demo-scale': embeddedScale } as React.CSSProperties}>
+    <div className="prototype-scale">
     <motion.section
       className="prototype"
       aria-label="Bills date picker prototype"
@@ -84,6 +95,8 @@ function BillsDemo() {
       </div>
       <AnimatePresence mode="wait">{selectedBill && <BillItem key={selected} bill={selectedBill} />}</AnimatePresence>
     </motion.section>
+    </div>
+    </div>
   </main>;
 }
 
