@@ -222,23 +222,9 @@ const projects = [
   },
 ];
 
-function BillsThumbnail() {
-  return <div className="gallery-bills-preview" aria-hidden="true">
-    <div className="preview-widget">
-      <div className="preview-head"><strong>Bills</strong><span /></div>
-      <div className="preview-tabs"><i /><i /></div>
-      <div className="preview-copy" />
-      <div className="preview-calendar">
-        {[0, 1, 2, 3, 4, 5, 6].map((item) => <span key={item} className={item === 1 ? 'has-bill' : item === 4 ? 'is-active' : ''}><i /></span>)}
-      </div>
-    </div>
-  </div>;
-}
-
 function ProjectThumbnail({ slug }: { slug: string }) {
-  return slug === 'folder-hover'
-    ? <div className="gallery-folder-preview"><FolderCard preview /></div>
-    : <BillsThumbnail />;
+  const filename = slug === 'folder-hover' ? 'folder-hover.png' : 'bills-date-picker.png';
+  return <img className="project-thumbnail-image" src={`${import.meta.env.BASE_URL}assets/gallery/${filename}`} alt="" />;
 }
 
 function Gallery() {

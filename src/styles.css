@@ -187,6 +187,7 @@ button:focus-visible { outline: 3px solid rgba(94,142,239,.38); outline-offset: 
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(18px, 2vw, 32px); row-gap: 72px; }
 .project-card { min-width: 0; }
 .project-preview { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: #ececec; color: #111; text-decoration: none; }
+.project-thumbnail-image { width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none; }
 .open-mark { position: absolute; top: 18px; right: 18px; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.9); font-size: 16px; opacity: 0; transform: translateY(4px); transition: opacity .22s ease, transform .22s ease; }
 .project-preview:hover .open-mark, .project-preview:focus-visible .open-mark { opacity: 1; transform: translateY(0); }
 .gallery-bills-preview { width: 100%; height: 100%; display: grid; place-items: center; background: #e9e9e9; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
