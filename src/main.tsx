@@ -51,10 +51,9 @@ function FolderCard({ preview = false, theme = 'gray' }: { preview?: boolean; th
         <span className="folder-paper folder-paper-back" />
         <span className="folder-paper folder-paper-front" />
       </span>
-      <span className="folder-front" />
-      <svg className="folder-front-outline" viewBox="0 0 343.175 247.15" aria-hidden="true">
+      <svg className="folder-front" viewBox="0 0 343.175 247.15" aria-hidden="true">
         <defs><linearGradient id={`folder-front-stroke-${theme}`} x1="222.5" y1="-9.67" x2="188.55" y2="238.45" gradientUnits="userSpaceOnUse"><stop stopColor="var(--stroke-1)" /><stop offset="1" stopColor="var(--stroke-2)" /></linearGradient></defs>
-        <path data-name="folder-back" d="M206.244 0C211.065 0 215.543 2.49656 218.078 6.59766L232.086 29.2598H319.987C332.793 29.2598 343.175 39.6412 343.175 52.4473V223.963C343.175 236.769 332.793 247.15 319.987 247.15H23.1875C10.3815 247.15 0 236.769 0 223.963V13.9121C0 6.22876 6.22876 0 13.9121 0H206.244Z" />
+        <path d="M206.244 0C211.065 0 215.543 2.49656 218.078 6.59766L232.086 29.2598H319.987C332.793 29.2598 343.175 39.6412 343.175 52.4473V223.963C343.175 236.769 332.793 247.15 319.987 247.15H23.1875C10.3815 247.15 0 236.769 0 223.963V13.9121C0 6.22876 6.22876 0 13.9121 0H206.244Z" />
       </svg>
       <span className="folder-name">{folder.name}</span>
       <span className="folder-size">{folder.size}</span>
