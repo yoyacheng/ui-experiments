@@ -45,7 +45,7 @@ function FolderCard({ preview = false, theme = 'gray' }: { preview?: boolean; th
             {rearGradients.open.map(([offset, color]) => <stop key={`${offset}-${color}`} offset={offset} stopColor={color} />)}
           </radialGradient>
         </defs>
-        <path />
+        <path d="M23.188 33H319.812C332.619 33 343 43.381 343 56.188V222.812C343 235.619 332.619 246 319.812 246H23.188C10.381 246 0 235.619 0 222.812V56.188C0 43.381 10.381 33 23.188 33Z" />
       </svg>
       <span className="folder-paper-clip">
         <span className="folder-paper folder-paper-back" />
@@ -54,7 +54,7 @@ function FolderCard({ preview = false, theme = 'gray' }: { preview?: boolean; th
       <span className="folder-front" />
       <svg className="folder-front-outline" viewBox="0 0 343.175 247.15" aria-hidden="true">
         <defs><linearGradient id={`folder-front-stroke-${theme}`} x1="222.5" y1="-9.67" x2="188.55" y2="238.45" gradientUnits="userSpaceOnUse"><stop stopColor="var(--stroke-1)" /><stop offset="1" stopColor="var(--stroke-2)" /></linearGradient></defs>
-        <path data-name="folder-back" />
+        <path data-name="folder-back" d="M206.244 0C211.065 0 215.543 2.49656 218.078 6.59766L232.086 29.2598H319.987C332.793 29.2598 343.175 39.6412 343.175 52.4473V223.963C343.175 236.769 332.793 247.15 319.987 247.15H23.1875C10.3815 247.15 0 236.769 0 223.963V13.9121C0 6.22876 6.22876 0 13.9121 0H206.244Z" />
       </svg>
       <span className="folder-name">{folder.name}</span>
       <span className="folder-size">{folder.size}</span>
